@@ -1,7 +1,7 @@
 # TBotFE
 
 # AWSPOC tBot
-A serverless web application hosted on AWS infrastructure. Components used.
+A serverless web application hosted on AWS infrastructure. Components used.<br>
 1: AWS RDS - Hosting a MarisDB instance. 
 2: AWS Lambda - Creates a connection with RDS instance and executes a simple select request.
 3: AWS API Gateway - Provides a REST API interface to the lambda function.
