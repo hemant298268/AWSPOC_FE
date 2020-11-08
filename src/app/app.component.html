@@ -1,0 +1,52 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class=main id=mainBody>
+<h1 align = "left" style = "margin:5px">tBot</h1>
+<button (click)='refresh()' style = "margin:5px">Refresh</button>
+<div class=table id=portfolioList>
+  <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" width=100%  >
+        <ng-container matColumnDef="th_sym_name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.th_sym_name}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="th_timestamp">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> TimeStamp </th>
+            <td mat-cell *matCellDef="let element"> {{element.th_timestamp}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="th_symbol_volume">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Volume </th>
+            <td mat-cell *matCellDef="let element"> {{element.th_symbol_volume}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="th_trade_price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Buy Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.th_trade_price}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="th_trade_profit">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Profit </th>
+            <td mat-cell *matCellDef="let element"> {{element.th_trade_profit}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    
+</div>
+<h1 align = "right" style = "margin:5px">tBot</h1>
+<router-outlet></router-outlet>
