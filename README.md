@@ -1,5 +1,13 @@
 # TBotFE
 
+# AWSPOC tBot
+A serverless web application hosted on AWS infrastructure. Components used.
+1: AWS RDS - Hosting a MarisDB instance. 
+2: AWS Lambda - Creates a connection with RDS instance and executes a simple select request.
+3: AWS API Gateway - Provides a REST API interface to the lambda function.
+4: S3 Bucket - Hosts the static HTML files for the web portal.
+5: Angular 10 - Creates the distribution package that goes inside the S3 bucket. 6: Java 1.8 - Used in the Lambda function
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
